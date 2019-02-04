@@ -7,28 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stock History Grapher</title>
-    <link href="assets\css\default.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <link href="assets\css\default.css" rel="stylesheet"/>
     <script src="assets\javascript\logic.js"></script>
 </head>
 
 <body>
-<div id="wrapper">
+<div class="jumbotron jumbotron-fluid py-3">
+    <div class="container">
+        <h2 class="text-center">Stock History Grapher</h2>
+    </div>
+</div>
 
-    <div id="userInputContainer">
-        <p>Please go to !!!www.TempURL.com!!! to find the ticker symbol of the stock or fund you would like to graph.</p>
-        <input type="text" id="tickerInput"/ value="VZ">
-        <button type="button" id="tickerGraphHistory">Graph Performance</button>
-        <p>Searching...</p>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <div class="card w-50">
+                <div class="card-body">
+                    Curious about how a certain stock or fund has performed in the market? Input it’s ticker symbol 
+                    (as an example Microsoft is MSFT) in the text box below to get a graph of it’s price over the 
+                    last 20 years. If you need to look up a ticker go to     
+                    <a href="https://www.marketwatch.com/tools/quotes/lookup.asp" target="_blank">marketwatch.com</a>
+                    to find the ticker symbol of the stock or fund you would like to graph.
+                    <div id="flex-container">
+                        <input type="text" class="form-control" id="tickerInput"/>
+                        <button type="button" class="btn btn-success" id="tickerGraphHistory">Graph History</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- this is a test-->
-    <div id="chartContainer">
-        <canvas id="myChart"></canvas>
+    <div class="row">
+            <div class="col d-flex justify-content-center">
+                <div style="width: 65%;">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
     </div>
 
 </div>
+
+<div class="page-footer-fluid font-small" id="pageFooter">
+    <div class="footer-copyright text-center py-2">
+        Thank you to
+        <a href="https://www.alphavantage.co/" target="_blank"> Alpha Vantage</a>
+        for the API
+    </div> 
+</div>
+
 </body>
 
 </html>

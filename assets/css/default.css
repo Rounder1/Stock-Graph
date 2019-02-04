@@ -1,4 +1,13 @@
-#userInputContainer{
-    margin-left: 35%;
-    margin-right: 35%
+#tickerInput {
+    width:35%;
+    margin-right: 1rem;
+}
+
+#flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+#pageFooter {
+    background-color: lightgrey;
 }
