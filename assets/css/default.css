@@ -11,3 +11,11 @@
 #pageFooter {
     background-color: lightgrey;
 }
+
+#chartContainer {
+    width: 65%;
+}
+
+#errorContainer {
+    width: 50%;
+}
